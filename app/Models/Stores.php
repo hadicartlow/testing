@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Stores extends Model
 {
     use HasFactory;
+    
     public function regions()
     {
         return $this->belongsToMany(Regions::class, 'regions_stores', 'stores_id', 'regions_id');
